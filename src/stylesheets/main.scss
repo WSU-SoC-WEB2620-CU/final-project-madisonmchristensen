@@ -1,1 +1,758 @@
-// Your styles go here
+//SASS Variables
+//$pink: #d63384;
+
+// Import Font Awesome
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+/***** NAVIGATION BAR STYLES *****/
+nav{
+    box-shadow: 0px 2px 5px #777;
+    background-color: #9EC2B0;
+}
+
+nav li{
+    border-right: 2px solid #749472;
+}
+
+nav li:last-child, nav li:first-child {
+    border-right: 0;
+}
+.nav-link{
+    color: #49544F !important;
+    font-size: 1.75em;
+}
+
+.nav-logo > img{
+    height: 75px;
+}
+
+nav > ul {
+    display: flex;
+}
+
+nav > ul > li:nth-child(2) {
+    margin-left: auto;
+}
+
+/***** JUMBOTRON STYLES *****/
+.jumbotron{
+    background-image: url("../images/popcornbig.jpg");
+    height: 300px;
+    background-size: cover;
+}
+
+.jumbotron > .lead > .btn-info{
+    background-color: #749472 !important;
+    color: #FBF4E2 !important;
+    border-color: #49544F;
+    font-size: 1.2em;
+}
+
+.jumbotron > .lead{
+    position: absolute;
+    top: 290px;
+    left: 950px;
+    right: 100px;
+    bottom: 100px;
+}
+
+/***** ALLERGEN STYLES *****/
+.allergens{
+    background-color: #9EC2B0;
+}
+
+.allergens > .container > .row > .col > img{
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+}
+
+/***** INFORMATION *****/
+.information > .card > .card-body{
+    background-color: #fbf4e2;
+    font-size: 1.5em;
+    color: #749472;
+    text-align: center;
+    padding: 10px 300px 10px 300px;
+}
+
+/***** FLAVORS *****/
+.flavorsbanner > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    box-shadow: 0px 2px 5px #777;
+    margin-bottom: 15px;
+}
+
+.flavors > .container > .row{
+    row-gap: 5px;
+}
+
+.flavors > .container > .row > .col > .card{
+    margin-bottom: 20px;
+    background-color: #9EC2B0;
+    border-color: #749472;
+    border-width: .15em;
+}
+
+.flavors > .container > .row > .col > .card > img{
+    width: 100%;
+    height: 150px;
+}
+
+.flavors > .container > .row > .col > .card > .card-body > .card-title{
+    color:#49544F;
+}
+
+.flavors > .container > .row > .col > .card > .card-body > .btn{
+    color: #fbf4e2;
+    background-color: #749472;
+    border-color: #49544F;
+}
+
+/***** FOOTER STYLES *****/
+footer{
+    padding: 10px;
+    color: #49544F !important;
+    background-color: #9EC2B0;
+    box-shadow: 0px 0px 5px #777;
+}
+
+footer > .container > .row > .col > .footerlinks > ul > li > a{
+    color: #49544F !important;
+    text-decoration: none;
+}
+
+footer > .container > .row > .col > .footerlinks > ul > li{
+    list-style-type: none;
+}
+
+footer p{
+    text-align: center;
+}
+
+/***** FLAVORS PAGE STYLING *****/
+.flavorsbanner2 > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    box-shadow: 0px 2px 5px #777;
+    margin-bottom: 0px;
+}
+
+.flavorcards > .card{
+    text-align: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.flavorcards > .card > .row > .col-md-4 > img{
+    width: 100%;
+    height: 200px;
+}
+
+/***** CATERING PAGE STYLING *****/
+.jumbocatering{
+    background-image: url("../images/cateringjumbo.jpg");
+    height: 300px;
+    background-size: cover;
+}
+
+.cateringimgs > img{
+    width: 33%;
+    height: 300px;
+}
+
+.cateringbanner > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    margin-bottom: 0px;
+}
+
+.cateringinfo > .card > .card-body{
+    background-color: #fbf4e2;
+    font-size: 1.5em;
+    color: #749472;
+    text-align: center;
+    padding: 10px 300px 10px 300px;
+}
+
+.caterbutton > a > button{
+    margin: 5px;
+    border-color: #49544F;
+    color: #fbf4e2;
+    background-color: #749472;
+}
+
+.cateringinfo > .card > .card-body > a{
+    color: #49544F !important;
+}
+
+/***** ABOUT PAGE STYLING *****/
+.about > h4{
+    color: #749472;
+    background: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 5px #777;
+    margin-bottom: 15px;
+}
+
+.about > .container > .row > .col > img{
+    width: 300px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.about > .container > .row > .col > p{
+    font-size: 1.25em;
+    text-align: left;
+    text-indent: 30px;
+}
+
+.contactbanner > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    margin-bottom: 0px;
+}
+
+/***** GALLERY PAGE STYLING *****/
+.gallerybanner > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    margin-bottom: 0px;
+}
+
+.galleryinfo > .card > .card-body{
+    background-color: #fbf4e2;
+    font-size: 1.5em;
+    color: #749472;
+    text-align: center;
+    padding: 10px 300px 10px 300px;
+}
+
+.gallerybutton{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallerybutton > a > button{
+    margin: 5px;
+    border-color: #49544F;
+    color: #fbf4e2;
+    background-color: #749472;
+}
+
+/***** GALLERY PAGE IMAGE GRID *****/
+.gallerycontainer > .img1 > img,
+.gallerycontainer > .img2 > img,
+.gallerycontainer > .img3 > img,
+.gallerycontainer > .img4 > img,
+.gallerycontainer > .img5 > img,
+.gallerycontainer > .img6 > img,
+.gallerycontainer > .img7 > img,
+.gallerycontainer > .img8 > img,
+.gallerycontainer > .img9 > img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+.gallerycontainer{
+    border: 2px solid #749472;
+    border-radius: .75rem;
+    padding: 5px;
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 6fr repeat(2, 3fr) 2fr repeat(2, 1fr) 2fr;
+    gap: 10px;
+    
+    grid-template-areas: "img1 img2 img2 img3 img4 img4 img5" 
+                         "img6 img2 img2 img3 img4 img4 img5"
+                         "img6 img9 img9 img7 img7 img7 img7"
+                         "img8 img9 img9 img7 img7 img7 img7"
+}
+
+.img1{
+    grid-area: img1;
+}
+
+.img2{
+    grid-area: img2;
+}
+
+.img3{
+    grid-area: img3;
+}
+
+.img4{
+    grid-area: img4;
+}
+
+.img5{
+    grid-area: img5;
+}
+
+.img6{
+    grid-area: img6;
+}
+
+.img7{
+    grid-area: img7;
+}
+
+.img8{
+    grid-area: img8;
+}
+
+.img9{
+    grid-area: img9;
+}
+
+/***** EVENTS PAGE STYLING *****/
+.eventsbanner > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    margin-bottom: 0px;
+}
+
+.eventsinfo > .card > .card-body{
+    background-color: #fbf4e2;
+    font-size: 1.5em;
+    color: #749472;
+    text-align: center;
+    padding: 10px 300px 10px 300px;
+}
+
+.eventcards{
+    margin: 15px;
+    text-align: center;
+}
+
+.eventcards > img{
+    width: 300px;
+    height: auto;
+}
+
+.eventcards > .container > .row > .col > .card{
+    width: auto;
+}
+
+.eventcards > .container > .row > .col > .card > .row > .col-md-8 > .card-body > p > small > a{
+    color: #749472 !important;
+}
+
+/***** CONTACT PAGE STYLING *****/
+.contactbanner > h4{
+    color: #fbf4e2;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: #749472;
+    box-shadow: 0px 2px 5px #777;
+}
+
+.contactinfo > .card > .card-body{
+    background-color: #fbf4e2;
+    font-size: 1.5em;
+    color: #749472;
+    text-align: center;
+    padding: 10px 300px 10px 300px;
+}
+
+.contactform{
+    margin: 25px;
+    color: #49544F;
+}
+
+.modalbutton > button{
+    margin-left: 25px;
+    margin-bottom: 15px;
+    border-color: #49544F;
+    color: #fbf4e2;
+    background-color: #749472;
+}
+
+/***** MEDIA QUERIES *****/
+
+/***** TABLET *****/
+@media all and (max-width: 768px){
+    //NAV
+    nav li:first-child{
+        margin-right: 50px;
+    }
+
+    .nav-link{
+        font-size: 1.25em;
+    }
+    
+    .nav-logo > img{
+        height: 50px;
+    }
+
+    //JUMBOTRON
+    .jumbotron{
+        height: 200px;
+    }
+    
+    .jumbotron > .lead > .btn-info{
+        font-size: 1em;
+    }
+    
+    .jumbotron > .lead{
+        position: absolute;
+        top: 200px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    //ALLERGENS
+    .allergens > .container > .row > .col > img{
+        height: 100px;
+        width: 100px;
+        padding: 5px;
+    }
+
+    //INFORMATION
+    .information > .card > .card-body{
+        font-size: 1.25em;
+        padding: 10px 100px 10px 100px;
+    }
+
+    //FLAVORS
+    .flavorsbanner > h4{
+        font-size: 2em;
+        padding: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .flavors > .container > .row{
+        row-gap: 5px;
+    }
+    
+    .flavors > .container > .row > .col > .card{
+        margin-bottom: 20px;
+        border-width: .15em;
+    }
+    
+    .flavors > .container > .row > .col > .card > img{
+        width: 100%;
+        height: 125px;
+    }
+
+    //FOOTER
+    footer > .container > .row > .col > .socials > h4,
+    footer > .container > .row > .col > .footerlinks > h4{
+        font-size: 1.25em;
+    }
+
+    //FLAVORS PAGE
+    .flavorsbanner2 > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+    
+    .flavorcards > .card{
+        margin: 10px;
+        width: 300px;
+    }
+    
+    .flavorcards > .card > .row > .col-md-4 > img{
+        width: 100%;
+        height: 100%;
+        justify-self: center;
+        margin-top: 10px;
+    }
+
+    .flavorcards > .card > .row > .col-md-8 > .card-body > h5{
+       font-size: 1.25em;
+    }
+
+    .flavorcards > .card > .row > .col-md-8 > .card-body > p{
+        font-size: 1em;
+     }
+
+     //EVENTS PAGE
+     .eventsbanner > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+
+     .eventsinfo > .card > .card-body{
+        font-size: 1.25em;
+        padding: 10px 100px 10px 100px;
+    }
+    
+    .eventcards > .container > .row > .col > .card > .row > .col-md-4{
+        width: 300px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .eventcards > .container > .row > .col > .card > .row {
+        justify-content: center;
+    }
+
+    .eventcards > .container > .row > .col > .card > .row > .col-md-8, .card-body{
+        font-size: 1em;
+    }
+
+    //CATERING PAGE
+    .jumbocatering{
+        height: 200px;
+    }
+    
+    .cateringimgs > img{
+        width: 32%;
+        height: 200px;
+    }
+    
+    .cateringbanner > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+    
+    .cateringinfo > .card > .card-body{
+        font-size: 1.25em;
+        padding: 10px 100px 10px 100px;
+    }
+
+    //GALLERY PAGE
+    .gallerybanner > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+    
+    .galleryinfo > .card > .card-body{
+        font-size: 1.25em;
+        padding: 10px 100px 10px 100px;
+    }
+
+    //ABOUT PAGE
+    .about > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+    
+    .about > .container > .row > .col > img{
+        width: 395px;
+        height: auto;
+        margin-bottom: 25px;
+    }
+    
+    .about > .container > .row > .col > p{
+        font-size: 1em;
+    }
+    
+    .contactbanner > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+
+    //CONTACT PAGE
+    .contactbanner > h4{
+        font-size: 2em;
+        padding: 4px;
+    }
+    
+    .contactinfo > .card > .card-body{
+        font-size: 1.25em;
+        padding: 10px 100px 10px 100px;
+    }
+}
+
+
+/***** PHONE *****/
+@media all and (max-width: 480px){
+    nav li:first-child{
+        //margin-right: 50px;
+    }
+
+    .nav-link{
+        font-size: 1.15em;
+    }
+    
+    .nav-logo > img{
+        height: 50px;
+    }
+
+    //JUMBOTRON
+    .jumbotron{
+        height: 125px;
+    }
+    
+    .jumbotron > .lead > .btn-info{
+        font-size: .75em;
+    }
+    
+    .jumbotron > .lead{
+        position: absolute;
+        top: 180px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    //ALLERGENS
+    .allergens > .container > .row > .col > img{
+        height: 80px;
+        width: 80px;
+        padding: 5px;
+    }
+
+    //INFORMATION
+    .information > .card > .card-body{
+        font-size: 1em;
+        padding: 10px 75px 10px 75px;
+    }
+
+    //FLAVORS
+    .flavorsbanner > h4{
+        font-size: 1.5em;
+        padding: 4px;
+        margin-bottom: 10px;
+    }
+
+    .flavors > .container > .row > .col > .card > .card-body > h5{
+        font-size: 1.15em;
+    }
+
+    //FOOTER
+    footer > .container > .row > .col > .socials > h4,
+    footer > .container > .row > .col > .footerlinks > h4{
+        font-size: 1em;
+    }
+
+    //FLAVORS PAGE
+    .flavorsbanner2 > h4{
+        font-size: 1.5em;
+        padding: 4px;
+    }
+    
+    .flavorcards > .card{
+        margin: 10px;
+        width: 200px;
+    }
+
+    .flavorcards > .card > .row > .col-md-8 > .card-body > h5{
+       font-size: 1.15em;
+    }
+
+    .flavorcards > .card > .row > .col-md-8 > .card-body > p{
+        font-size: 1em;
+    }
+
+    //EVENTS PAGE
+    .eventsbanner > h4{
+        font-size: 1.5em;
+        padding: 4px;
+    }
+
+    .eventsinfo > .card > .card-body{
+        font-size: 1em;
+        padding: 10px 75px 10px 75px;
+    }
+    
+    .eventcards > .container > .row > .col > .card > .row > .col-md-4{
+        width: 300px;
+        height: auto;
+        margin-top: 0px;
+    }
+
+    .eventcards > .container > .row > .col > .card{
+        width: 300px;
+        margin-left: 50px;
+    }
+
+    .eventcards > .container > .row > .col > .card > .row > .col-md-8, .card-body{
+        font-size: .95em;
+    }
+
+    //CATERING PAGE
+    .jumbocatering{
+        height: 125px;
+    }
+    
+    .cateringimgs > img{
+        width: 32%;
+        height: 125px;
+    }
+    
+    .cateringbanner > h4{
+        font-size: 1.5em;
+        padding: 4px;
+    }
+    
+    .cateringinfo > .card > .card-body{
+        font-size: 1em;
+        padding: 10px 75px 10px 75px;
+    }
+
+    //GALLERY PAGE
+    .gallerybanner > h4{
+        font-size: 1.5em;
+        padding: 4px;
+    }
+    
+    .galleryinfo > .card > .card-body{
+        font-size: 1em;
+        padding: 10px 75px 10px 75px;
+    }
+
+        //ABOUT PAGE
+        .about > h4{
+            font-size: 1.5em;
+            padding: 4px;
+        }
+        
+        .about > .container > .row > .col > img{
+            width: 290px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+        
+        .about > .container > .row > .col > p{
+            font-size: 1em;
+            margin: 10px;
+        }
+        
+        .contactbanner > h4{
+            font-size: 1.5em;
+            padding: 4px;
+        }
+    
+        //CONTACT PAGE
+        .contactbanner > h4{
+            font-size: 1.5em;
+            padding: 4px;
+        }
+        
+        .contactinfo > .card > .card-body{
+            font-size: 1em;
+            padding: 10px 75px 10px 75px;
+        }
+}
