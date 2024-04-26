@@ -1,5 +1,38 @@
 //SASS Variables
-//$pink: #d63384;
+$light-green: #9EC2B0;
+$green: #749472;
+$dark-green: #49544F;
+$cream: #FBF4E2;
+
+//MIXINS
+@mixin infobody{
+    background-color: $cream;
+    font-size: 1.5em;
+    color: $green;
+    text-align: center;
+    padding: 10px 300px 10px 300px;
+}
+
+@mixin infobanner{
+    color: $cream;
+    font-size: 3em;
+    padding: 8px;
+    text-align: center;
+    background-color: $green;
+    margin-bottom: 0px;
+}
+
+@mixin btnnorm{
+    border-color: $dark-green;
+    color: $cream;
+    background-color: $green;
+}
+
+@mixin btnhover{
+    border-color: $dark-green;
+    color: $cream;
+    background-color: $dark-green;
+}
 
 // Import Font Awesome
 @import "@fortawesome/fontawesome-free/css/all.css";
@@ -10,31 +43,45 @@
 /***** NAVIGATION BAR STYLES *****/
 nav{
     box-shadow: 0px 2px 5px #777;
-    background-color: #9EC2B0;
+    background-color: $light-green;
 }
 
 nav li{
-    border-right: 2px solid #749472;
+    border-right: 2px solid $green;
 }
 
-nav li:last-child, nav li:first-child {
+nav li:last-child {
     border-right: 0;
 }
+
 .nav-link{
-    color: #49544F !important;
+    color: $dark-green !important;
     font-size: 1.75em;
+}
+
+.nav-link:hover{
+    color: $cream !important;
 }
 
 .nav-logo > img{
     height: 75px;
 }
 
-nav > ul {
-    display: flex;
+.nav-logo > img:hover{
+    opacity: 80%;
 }
 
-nav > ul > li:nth-child(2) {
+.navbar-nav{
     margin-left: auto;
+    padding: 5px;
+}
+
+.navbar-nav > li{
+    padding: 5px;
+}
+
+.navbar-nav:last-child{
+    margin-right: 0 !important;
 }
 
 /***** JUMBOTRON STYLES *****/
@@ -45,23 +92,29 @@ nav > ul > li:nth-child(2) {
 }
 
 .jumbotron > .lead > .btn-info{
-    background-color: #749472 !important;
-    color: #FBF4E2 !important;
-    border-color: #49544F;
+    background-color: $green !important;
+    color: $cream !important;
+    border-color: $dark-green;
     font-size: 1.2em;
+}
+
+.jumbotron > .lead > .btn-info:hover{
+    background-color: $cream !important;
+    color: $green !important;
 }
 
 .jumbotron > .lead{
     position: absolute;
+    position: absolute;
     top: 290px;
-    left: 950px;
-    right: 100px;
-    bottom: 100px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
 }
 
 /***** ALLERGEN STYLES *****/
 .allergens{
-    background-color: #9EC2B0;
+    background-color: $light-green;
 }
 
 .allergens > .container > .row > .col > img{
@@ -72,20 +125,13 @@ nav > ul > li:nth-child(2) {
 
 /***** INFORMATION *****/
 .information > .card > .card-body{
-    background-color: #fbf4e2;
-    font-size: 1.5em;
-    color: #749472;
-    text-align: center;
-    padding: 10px 300px 10px 300px;
+    @include infobody;
 }
 
 /***** FLAVORS *****/
 .flavorsbanner > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
+   @include infobanner;
+
     box-shadow: 0px 2px 5px #777;
     margin-bottom: 15px;
 }
@@ -96,8 +142,8 @@ nav > ul > li:nth-child(2) {
 
 .flavors > .container > .row > .col > .card{
     margin-bottom: 20px;
-    background-color: #9EC2B0;
-    border-color: #749472;
+    background-color: $light-green;
+    border-color: $green;
     border-width: .15em;
 }
 
@@ -107,26 +153,34 @@ nav > ul > li:nth-child(2) {
 }
 
 .flavors > .container > .row > .col > .card > .card-body > .card-title{
-    color:#49544F;
+    color: $dark-green;
 }
 
 .flavors > .container > .row > .col > .card > .card-body > .btn{
-    color: #fbf4e2;
-    background-color: #749472;
-    border-color: #49544F;
+    color: $cream;
+    background-color: $green;
+    border-color: $dark-green;
+}
+
+.flavors > .container > .row > .col > .card > .card-body > .btn:hover{
+    background-color: $dark-green;
 }
 
 /***** FOOTER STYLES *****/
 footer{
     padding: 10px;
-    color: #49544F !important;
-    background-color: #9EC2B0;
+    color: $dark-green !important;
+    background-color: $light-green;
     box-shadow: 0px 0px 5px #777;
 }
 
 footer > .container > .row > .col > .footerlinks > ul > li > a{
-    color: #49544F !important;
+    color: $dark-green !important;
     text-decoration: none;
+}
+
+footer > .container > .row > .col > .footerlinks > ul > li > a:hover{
+    color: $cream !important;
 }
 
 footer > .container > .row > .col > .footerlinks > ul > li{
@@ -139,12 +193,8 @@ footer p{
 
 /***** FLAVORS PAGE STYLING *****/
 .flavorsbanner2 > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
-    box-shadow: 0px 2px 5px #777;
+    @include infobanner;
+    
     margin-bottom: 0px;
 }
 
@@ -172,37 +222,35 @@ footer p{
 }
 
 .cateringbanner > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
-    margin-bottom: 0px;
+    @include infobanner;
 }
 
 .cateringinfo > .card > .card-body{
-    background-color: #fbf4e2;
-    font-size: 1.5em;
-    color: #749472;
-    text-align: center;
-    padding: 10px 300px 10px 300px;
+    @include infobody;
 }
 
 .caterbutton > a > button{
     margin: 5px;
-    border-color: #49544F;
-    color: #fbf4e2;
-    background-color: #749472;
+    @include btnnorm;
+}
+
+.caterbutton > a > button:hover{
+    margin: 5px;
+    @include btnhover;
 }
 
 .cateringinfo > .card > .card-body > a{
-    color: #49544F !important;
+    color: $dark-green !important;
+}
+
+.cateringinfo > .card > .card-body > a:hover{
+    color: $green !important;
 }
 
 /***** ABOUT PAGE STYLING *****/
 .about > h4{
-    color: #749472;
-    background: #fbf4e2;
+    color: $green;
+    background: $cream;
     font-size: 3em;
     padding: 8px;
     text-align: center;
@@ -223,30 +271,16 @@ footer p{
 }
 
 .contactbanner > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
-    margin-bottom: 0px;
+    @include infobanner;
 }
 
 /***** GALLERY PAGE STYLING *****/
 .gallerybanner > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
-    margin-bottom: 0px;
+    @include infobanner;
 }
 
 .galleryinfo > .card > .card-body{
-    background-color: #fbf4e2;
-    font-size: 1.5em;
-    color: #749472;
-    text-align: center;
-    padding: 10px 300px 10px 300px;
+    @include infobody;
 }
 
 .gallerybutton{
@@ -258,9 +292,13 @@ footer p{
 
 .gallerybutton > a > button{
     margin: 5px;
-    border-color: #49544F;
-    color: #fbf4e2;
-    background-color: #749472;
+    @include btnnorm;
+}
+
+
+.gallerybutton > a > button:hover{
+    margin: 5px;
+    @include btnhover;
 }
 
 /***** GALLERY PAGE IMAGE GRID *****/
@@ -279,7 +317,7 @@ footer p{
 }
 
 .gallerycontainer{
-    border: 2px solid #749472;
+    border: 2px solid $green;
     border-radius: .75rem;
     padding: 5px;
     margin: 25px;
@@ -331,20 +369,11 @@ footer p{
 
 /***** EVENTS PAGE STYLING *****/
 .eventsbanner > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
-    margin-bottom: 0px;
+    @include infobanner;
 }
 
 .eventsinfo > .card > .card-body{
-    background-color: #fbf4e2;
-    font-size: 1.5em;
-    color: #749472;
-    text-align: center;
-    padding: 10px 300px 10px 300px;
+    @include infobody;
 }
 
 .eventcards{
@@ -362,38 +391,38 @@ footer p{
 }
 
 .eventcards > .container > .row > .col > .card > .row > .col-md-8 > .card-body > p > small > a{
-    color: #749472 !important;
+    color: $light-green !important;
+    font-size: 1.4em;
+}
+
+.eventcards > .container > .row > .col > .card > .row > .col-md-8 > .card-body > p > small > a:hover{
+    color: $green !important;
 }
 
 /***** CONTACT PAGE STYLING *****/
 .contactbanner > h4{
-    color: #fbf4e2;
-    font-size: 3em;
-    padding: 8px;
-    text-align: center;
-    background-color: #749472;
-    box-shadow: 0px 2px 5px #777;
+    @include infobanner;
 }
 
 .contactinfo > .card > .card-body{
-    background-color: #fbf4e2;
-    font-size: 1.5em;
-    color: #749472;
-    text-align: center;
-    padding: 10px 300px 10px 300px;
+    @include infobody;
 }
 
 .contactform{
     margin: 25px;
-    color: #49544F;
+    color: $dark-green;
 }
 
 .modalbutton > button{
     margin-left: 25px;
     margin-bottom: 15px;
-    border-color: #49544F;
-    color: #fbf4e2;
-    background-color: #749472;
+    @include btnnorm;
+}
+
+.modalbutton > button:hover{
+    margin-left: 25px;
+    margin-bottom: 15px;
+    @include btnhover;
 }
 
 /***** MEDIA QUERIES *****/
@@ -402,7 +431,7 @@ footer p{
 @media all and (max-width: 768px){
     //NAV
     nav li:first-child{
-        margin-right: 50px;
+        //margin-right: 50px;
     }
 
     .nav-link{
@@ -586,10 +615,11 @@ footer p{
 }
 
 
+
 /***** PHONE *****/
 @media all and (max-width: 480px){
     nav li:first-child{
-        //margin-right: 50px;
+        //margin-right: 0px;
     }
 
     .nav-link{
@@ -597,7 +627,7 @@ footer p{
     }
     
     .nav-logo > img{
-        height: 50px;
+        height: 45px;
     }
 
     //JUMBOTRON
@@ -611,7 +641,7 @@ footer p{
     
     .jumbotron > .lead{
         position: absolute;
-        top: 180px;
+        top: 140px;
         left: 20px;
         right: 20px;
         bottom: 20px;
